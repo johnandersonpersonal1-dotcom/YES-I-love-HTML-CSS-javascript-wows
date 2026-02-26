@@ -23,7 +23,7 @@ function validate(e){
     msgBox.innerHTML = message;
 }
 
-document.getElementById("loginForm").innerHTML = validate;
+document.getElementById("loginForm").onsubmit = validate;
 document.getElementById("email").oninput = () => validate({ preventDefault: () => {}});
 document.getElementById("password").oninput = () => validate({ preventDefault: () => {}});
 document.getElementById("age").oninput = () => validate({ preventDefault: () => {}});
